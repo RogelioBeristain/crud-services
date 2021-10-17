@@ -16,9 +16,14 @@ class SocialNetworks extends Migration{
             $table->timestamps();
             $table->unsignedBigInteger('ally_id')->nullable();
 
+        });
+
+        Schema::table('social_networks', function (Blueprint $table) {
             $table->foreign('ally_id')->references('id')->on('allianses')
             ->onDelete('set null');
         });
+
+
     }
 
     public function down(){
