@@ -18,6 +18,8 @@ class Allianses extends Migration
             $table->string('name',250);
             $table->string('web',150);
             $table->string('img',2500);
+            $table->string('description',2500);
+            $table->string('cover',2500);
             $table->timestamps();
         });
     }
